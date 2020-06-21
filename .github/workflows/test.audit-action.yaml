@@ -1,8 +1,9 @@
+name: Audit Action
 on: [push]
 jobs:
   audit_action_job:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: A job to test audit action 
     steps:
       - name: Checkout
         uses: actions/audit-action@v1.0.2

@@ -6,7 +6,7 @@ jobs:
     name: A job to test audit action 
     steps:
       - name: Checkout
-        uses: actions/audit-action@v1.0.2
+        uses: actions/audit-action@v1.0.5
       - name: Use the action
         uses: ./ # Uses an action in the root directory
         id: audit-action

@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           repository: legolamel/audit-action
-          ref: v1.0.5
+          ref: v1.0.6
       - name: Use the action
         uses: ./ # Uses an action in the root directory
         id: audit-action

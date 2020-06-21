@@ -5,8 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to test audit action 
     steps:
-      - name: Checkout
-        uses: actions/audit-action@v1.0.5
+      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+        with:
+          repository: legolamel/audit-action
+          ref: v1.0.5
       - name: Use the action
         uses: ./ # Uses an action in the root directory
         id: audit-action

@@ -10,6 +10,8 @@ jobs:
         with:
           repository: legolamel/audit-action
           ref: master
+      - name: list
+        run: ls
       - name: Use the action
         id: audit-action
         uses: ./

@@ -12,7 +12,6 @@ jobs:
           ref: v1
       - name: Use the action
         id: audit-action
-        uses: ./ # Uses an action in the root directory
+        uses: ./
         with:
-          dirPath: vulnerable-project
-          debug: true
+          dirPath: ./vulnerable-project

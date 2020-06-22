@@ -14,4 +14,4 @@ jobs:
         uses: ./ # Uses an action in the root directory
         id: audit-action
         with:
-          dirPath: 'vulnerable-project'
+          dirPath: ${{ github.workspace }}/vulnerable-project

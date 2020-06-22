@@ -14,5 +14,4 @@ jobs:
         id: audit-action
         uses: ./ # Uses an action in the root directory
         with:
-          dirPath: ${{ github.workspace }}/vulnerable-project
-          debug: true
+          dirPath: vulnerable-project

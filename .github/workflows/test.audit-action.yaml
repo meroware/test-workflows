@@ -10,11 +10,12 @@ jobs:
         with:
           repository: legolamel/audit-action
           ref: master
+          path: .github/actions/audit-action
       - name: list
         run: ls
       - name: Use the action
         id: audit-action
-        uses: ./
+        uses: ./.github/actions/audit-action
         with:
            dirPath: vulnerable-project
            debug: true

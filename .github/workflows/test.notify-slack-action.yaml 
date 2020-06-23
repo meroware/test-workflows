@@ -1,0 +1,18 @@
+name: Notify Slack Action
+on: [push]
+jobs:
+  notify_slack_job:
+    runs-on: ubuntu-latest
+    name: A job to test notify slack action
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+        with:
+          repository: legolamel/notify-slack-action
+          ref: initial-code
+          path: .github/actions/notify-slack-action
+      - name: Use the action
+        id: notify-slack-action
+        uses: ./.github/actions/notify-slack-action
+        with:
+           who-to-greet: 'Someone out there'

@@ -13,11 +13,6 @@ jobs:
           path: .github/actions/notify-slack-action
       - id: 'test_id'
         run: 'ls'
-      - name: Dump GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ github.event.pull_request.commits_url }}
-        run: echo "$GITHUB_CONTEXT"
-      - run: curl -o out.json ${{ github.event.pull_request.commits_url }}
       - name: Use the action
         if: ${{ always() }}
         id: notify-slack-action

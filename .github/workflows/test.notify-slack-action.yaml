@@ -16,3 +16,4 @@ jobs:
         uses: ./.github/actions/notify-slack-action
         with:
            slack-webhook: ${{ secrets.SLACK_WEBHOOK }}
+           workflow-status: ${{ steps.build_service.outcome }}

@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           repository: legolamel/npm-audit-action
-          ref: master
+          ref: v1
           path: .github/actions/npm-audit-action
       - name: Use the action
         id: npm-audit-action

@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           repository: legolamel/notify-slack-action
-          ref: master
+          ref: fix-comments
           path: .github/actions/notify-slack-action
       - id: 'test_id'
         run: 'ls'

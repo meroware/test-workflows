@@ -12,6 +12,7 @@ jobs:
           ref: initial-code
           path: .github/actions/notify-slack-action
       - name: Use the action
+        if: ${{ always() }}
         id: notify-slack-action
         uses: ./.github/actions/notify-slack-action
         with:

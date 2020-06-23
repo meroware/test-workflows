@@ -11,10 +11,12 @@ jobs:
           repository: legolamel/notify-slack-action
           ref: initial-code
           path: .github/actions/notify-slack-action
+      - id: 'test_id'
+        run: 'ls'
       - name: Use the action
         if: ${{ always() }}
         id: notify-slack-action
         uses: ./.github/actions/notify-slack-action
         with:
            slack-webhook: ${{ secrets.SLACK_WEBHOOK }}
-           workflow-status: ${{ steps.build_service.outcome }}
+           workflow-status: ${{ steps.test_id.outcome }}

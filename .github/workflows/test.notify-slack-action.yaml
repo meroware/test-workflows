@@ -15,4 +15,4 @@ jobs:
         id: notify-slack-action
         uses: ./.github/actions/notify-slack-action
         with:
-           who-to-greet: 'Someone out there'
+           slack-webhook: ${{ secrets.SLACK_WEBHOOK }}

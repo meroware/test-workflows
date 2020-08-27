@@ -11,7 +11,9 @@ jobs:
           repository: legolamel/npm-audit-action
           ref: v1
           path: .github/actions/npm-audit-action
-      - run: echo ${{ github.event_name == 'push' }}
+      - run: echo ${{ env.CANDY }} 
+        env:
+          CANDY: ${{ github.event_name == 'push' }}
       - run: echo ${{ github.event_name == 'candy' }}
       - run: echo ${{ github.event_name }}
       - name: Use the action

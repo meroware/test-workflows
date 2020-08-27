@@ -1,0 +1,10 @@
+name: Branch Only
+on: [push]
+jobs:
+  branchj-job:
+    runs-on: ubuntu-latest
+    name: A job to test running workflow in branch only
+    steps:
+      - uses: actions/checkout@v2
+      - name: echo only
+        run: echo "I ran properly"

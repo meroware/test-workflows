@@ -11,9 +11,6 @@ jobs:
           repository: legolamel/npm-audit-action
           ref: v1
           path: .github/actions/npm-audit-action
-      - id: getjiraticket
-        run:  echo "::set-output name=jiraticketid::`echo "${{ github.ref }}" | sed 's/.*\///'`"
-      - run: echo ${{ steps.getjiraticket.outputs.jiraticketid }}
       - name: Use the action
         id: npm-audit-action
         uses: ./.github/actions/npm-audit-action

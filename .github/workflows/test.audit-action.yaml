@@ -11,8 +11,6 @@ jobs:
           repository: legolamel/npm-audit-action
           ref: v1
           path: .github/actions/npm-audit-action
-      - run: ${{ join(github.event.issue.labels) == '' }}
-      - run: ${{ github.event.issue.labels }}
       - name: Use the action
         id: npm-audit-action
         uses: ./.github/actions/npm-audit-action

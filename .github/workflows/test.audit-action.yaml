@@ -4,7 +4,6 @@ jobs:
   audit_action_job:
     runs-on: ubuntu-latest
     name: A job to test audit action 
-    timeout-minutes: 2 # Times out after 2 minute
     steps:
       - uses: actions/checkout@v2
       - uses: actions/checkout@v2
@@ -12,10 +11,13 @@ jobs:
           repository: legolamel/npm-audit-action
           ref: v1
           path: .github/actions/npm-audit-action
-          
       - name: Run file with timeout
+        id: longrunner
+        continue-on-error: true
         timeout-minutes: 1 # Times out after 1 minute
         run: sleep 90
+      - name: check previuos step
+        run: "[ ${{ steps.longrunner.outcome }} == 'cancelled' ] &&  echo 'Step cancelled'"
       - name: Use the action
         id: npm-audit-action
         uses: ./.github/actions/npm-audit-action

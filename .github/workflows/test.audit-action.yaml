@@ -4,6 +4,7 @@ jobs:
   audit_action_job:
     runs-on: ubuntu-latest
     name: A job to test audit action 
+    timeout-minutes: 2 # Times out after 2 minute
     steps:
       - uses: actions/checkout@v2
       - uses: actions/checkout@v2

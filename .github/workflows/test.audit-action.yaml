@@ -17,7 +17,7 @@ jobs:
         timeout-minutes: 1 # Times out after 1 minute
         run: sleep 90
       - name: check previuos step
-        run: "[ '${{ steps.longrunner.outcome }}' == 'cancelled' ] &&  echo 'Step cancelled' || echo 'Status Found" ${{ steps.longrunner.outcome }}'"
+        run: "[ '${{ steps.longrunner.outcome }}' == 'cancelled' ] &&  echo 'Step cancelled' || echo 'Status Found' ${{ steps.longrunner.outcome }}'"
       - name: Use the action
         id: npm-audit-action
         uses: ./.github/actions/npm-audit-action

@@ -1,0 +1,16 @@
+name: Test Node
+on: [push]
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
+    name: A job to test audit action 
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+           node-version: '12.x'
+      - run: node test.js
+      - run: node test.js
+        with:
+           my-input: 'testing input'

@@ -1,0 +1,17 @@
+name: Refresh Feed
+on: [push]
+jobs:
+  refresh-feed:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+  
+      - name: Fetch API Data
+        uses: JamesIves/fetch-api-data-action@1.0.15
+        with:
+          ENDPOINT: https://www.loc.gov/maps/?fa=location:cyprus&fo=json&at=results
+          RETRY: true
+      - run: ls

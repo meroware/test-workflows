@@ -9,13 +9,13 @@ jobs:
       - run: |
           response=$(curl -sb -H "Accept: application/json" "https://www.instagram.com/_meroware/?__a=1")
           echo $response
-      - uses: actions/checkout@v2
-        with:
-          repository: legolamel/npm-audit-action
-          ref: v1
-          path: .github/actions/npm-audit-action
-      - name: Use the action
-        id: npm-audit-action
-        uses: ./.github/actions/npm-audit-action
-        with:
-           dirPath: vulnerable-project
+#       - uses: actions/checkout@v2
+#         with:
+#           repository: legolamel/npm-audit-action
+#           ref: v1
+#           path: .github/actions/npm-audit-action
+#       - name: Use the action
+#         id: npm-audit-action
+#         uses: ./.github/actions/npm-audit-action
+#         with:
+#            dirPath: vulnerable-project

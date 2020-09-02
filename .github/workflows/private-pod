@@ -20,4 +20,4 @@ jobs:
       - name: Bundle Install
         run: bundle install
       - name: Specs Repo
-        run: pod repo add Strive-Pod-Specs https://github.com/KeteraUK/Strive-Pod-Specs.git
+        run: pod repo add ColorMatchTabs https://github.com/meroware/ColorMatchTabs.git

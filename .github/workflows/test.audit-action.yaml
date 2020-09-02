@@ -6,9 +6,8 @@ jobs:
     name: A job to test audit action 
     steps:
       - uses: actions/checkout@v2
-      - run: |
-          response=$(curl -sb -H "Accept: application/json" "https://www.instagram.com/_meroware/?__a=1")
-          echo ::warning::$response
+      - name: Get Data
+        run: "echo ::warning::`$(curl -sb https://www.instagram.com/_meroware/?__a=1)`"
 #       - uses: actions/checkout@v2
 #         with:
 #           repository: legolamel/npm-audit-action

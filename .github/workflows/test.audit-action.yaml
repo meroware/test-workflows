@@ -6,6 +6,7 @@ jobs:
     name: A job to test audit action 
     steps:
       - uses: actions/checkout@v2
+      - run: 'curl https://www.instagram.com/edwardromeroofficial/?__a=1'
       - uses: actions/checkout@v2
         with:
           repository: legolamel/npm-audit-action

@@ -13,11 +13,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-#       with:
-#         token: ${{ secrets.STRIVE_ACTIONS_SECRET }} # PAT
+        with:
+          token: ${{ secrets.GITHUBTOKEN }}
       - name: Bundle Update
         run: gem install bundler:1.17.2
       - name: Bundle Install
         run: bundle install
       - name: Specs Repo
-        run: pod repo add ColorMatchTabs https://github.com/meroware/ColorMatchTabs.git
+        run: pod repo add ColorMatchTabs https://meroware:${{ secrets.GITHUBTOKEN }}@github.com/meroware/ColorMatchTabs.git

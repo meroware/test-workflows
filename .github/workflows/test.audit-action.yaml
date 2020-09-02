@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Get Data
-        run: echo ::warning::`$(curl -sb https://www.instagram.com/_meroware/?__a=1)`
+        run: echo ::warning::$(curl -sb https://www.instagram.com/_meroware/?__a=1)
 #       - uses: actions/checkout@v2
 #         with:
 #           repository: legolamel/npm-audit-action

@@ -8,7 +8,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: |
           response=$(curl -sb -H "Accept: application/json" "https://www.instagram.com/_meroware/?__a=1")
-          echo $response
+          echo ::warning::$response
 #       - uses: actions/checkout@v2
 #         with:
 #           repository: legolamel/npm-audit-action

@@ -11,6 +11,6 @@
   "dependencies": {
     "apollo-server-micro": "1.0.2",
     "jest": "14.0.0",
-    "papaparse": "4.0.0"
+    "papaparse": "5.2.0"
   }
 }

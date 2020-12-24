@@ -1,5 +1,4 @@
 name: Postgress test
-
 on:
   push:
 jobs:
@@ -17,3 +16,5 @@ jobs:
           --health-retries 5
         ports:
           - 5432:5432
+    steps:
+      - run: echo test
